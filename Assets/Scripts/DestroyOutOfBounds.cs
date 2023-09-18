@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
-    [SerializeField] float topBound = 30f;
-    [SerializeField] float lowerBound = -30f;
-    private GameManager gameManager;
+    [SerializeField] float topBound = 35;
+    [SerializeField] float lowerBound = -5f;
+    [SerializeField] int obstaclePoint = 1;
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        GameController controller = GameObject.FindAnyObjectByType<GameController>();
+        controller.UpdateScore(obstaclePoint);
     }
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.z>topBound)
+        if(transform.position.x>topBound)
         {
             Destroy(gameObject);
-        }else if(transform.position.z<lowerBound )
+        }else if(transform.position.x<lowerBound )
         {
-            gameManager.UpdateLives(-1);
             Destroy(gameObject);
         }
         

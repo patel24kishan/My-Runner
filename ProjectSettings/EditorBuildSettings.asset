@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ModTheCube/Scene.unity
-    guid: 0837f2ea600db39419ef0a366d70b9de
+    path: Assets/Scenes/Startmenu.unity
+    guid: ec39159ffd3afdf4c8c9543fe7f13b09
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 266b6b54121a65b4091160dcdbb67acc
   m_configObjects: {}

@@ -23,18 +23,12 @@ public class GameManager : MonoBehaviour
             return;
         }
         Instance = this;
-      //  DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
     {
         LoadData();
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
 
@@ -46,7 +40,6 @@ public class GameManager : MonoBehaviour
 
     public void SaveHighScoreData(int value)
     {
-        // LoadColor();
         UnityEngine.Debug.Log("savedata called");
         string path = Application.persistentDataPath + "/savefile.json";
         int tmpPoint = 0;
